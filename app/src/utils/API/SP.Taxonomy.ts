@@ -1,5 +1,5 @@
-import { Cache } from "../utils/Cache";
-import { Utils } from "../utils/Utils";
+import { Cache } from "./../Cache";
+import { Utils } from "./../Utils";
 
 export default class TaxonomyAPI {
 
