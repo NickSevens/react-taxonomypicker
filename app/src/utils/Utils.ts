@@ -40,7 +40,7 @@ export class Utils {
     if (window
       && window.hasOwnProperty("location")
       && window.location.hasOwnProperty("pathname")) {
-      return  window.location.pathname.replace(/\/$/, "");
+      return window.location.pathname.replace(/\/$/, "");
     }
     return null;
   }
@@ -53,11 +53,15 @@ export class Utils {
    *      "/sites/intranet/_layouts/15/sp.js"
    */
   public static getLayoutsPageUrl(libraryName: string): string {
+    if (_spPageContextInfo && _spPageContextInfo.webServerRelativeUrl) {
+      return _spPageContextInfo.webServerRelativeUrl + "/_layouts/15/" + libraryName;
+    }
+
     if (window
       && window.hasOwnProperty("location")
       && window.location.hasOwnProperty("pathname")
       && libraryName !== "") {
-      return  window.location.pathname.replace(/\/$/, "") + "/_layouts/15/" + libraryName;
+      return window.location.pathname.replace(/\/$/, "") + "/_layouts/15/" + libraryName;
     }
     return null;
   }
