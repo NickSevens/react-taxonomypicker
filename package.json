@@ -36,6 +36,7 @@
   "homepage": "https://github.com/jquintozamora/react-taxonomypicker#readme",
   "dependencies": {
     "@types/react-select": "1.0.52",
+    "lodash.trimend": "^4.5.1",
     "react": "^15.6.1",
     "react-select": "1.0.0-rc.5"
   },
