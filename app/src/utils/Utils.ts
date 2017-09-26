@@ -55,7 +55,7 @@ export class Utils {
    */
   public static getLayoutsPageUrl(libraryName: string): string {
     if (_spPageContextInfo && _spPageContextInfo.webServerRelativeUrl) {
-      return trimend(_spPageContextInfo.webServerRelativeUrl) + "/_layouts/15/" + libraryName;
+      return trimend(_spPageContextInfo.webServerRelativeUrl, "/") + "/_layouts/15/" + libraryName;
     }
 
     if (window
